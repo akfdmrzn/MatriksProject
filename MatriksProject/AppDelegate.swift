@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.shared.statusBarStyle = .default
+        UITabBar.appearance().tintColor = UIColor( red: CGFloat(69/255.0), green: CGFloat(139/255.0), blue: CGFloat(116/255.0), alpha: CGFloat(1.0) )
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemText = "Tamam"
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        
         return true
     }
 
